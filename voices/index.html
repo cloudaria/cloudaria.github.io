@@ -19,42 +19,174 @@
     @media only screen 
     and (min-device-width : 320px) 
     and (max-device-width : 480px) {
-      h1 {
-        font-family: "Source Sans Pro",Helvetica, arial,sans-serif;
-        font-size: 30px;
-        text-shadow: 0 1px 6px #000;
-        margin-bottom: 36px;
-        font-weight: 600;
-      }
-      h2 {
-        font-family: "Source Sans Pro",Helvetica, arial,sans-serif;
-        font-size: 36px;
-        font-weight: 600;
-        line-height: 1.2;
-        color: #444;
-        margin: 24px 0 30px;
-      }
-      h3,
-      h4 {
-        color: #C41E3A;
-        text-transform: uppercase;
-        font-size: 18px;
-        padding: 6px 0;
-        font-weight: 600;
-        text-align: center;
-      }
-      h4 {
-        color: #fff;
-      }
-      p {
-        font-size: 18px;
-        line-height: 1.5;
+      body {
+        color: #555;
+        font-family: "Source Sans Pro","Helvetica Neue", Helvetica, Arial, sans-serif;
       }
       img {
         max-width: 100%;
       }
+
+      .header,
+      .footer {
+        background: #000;
+      }
+      .footer {
+        padding: 0 10px;
+      }
+      .container {
+        padding: 0 10px;
+      }
+
+      .links {
+        line-height: 48px;
+      }
+      .links a,
+      .links .a {
+        color: #fff;
+      }
+
+      .hero,
+      .contact {
+        background: #444 url('images/Cover-Image.jpg') no-repeat center;
+        background-size: cover;
+        color: #fff;
+        padding: 24px 10px;
+        text-align: center;
+      }
+      .contact {
+        background:#444 url(images/bg-footer.jpg) no-repeat;
+      }
+
+      .logo {
+        text-align: center;
+      }
+      .top-links {
+        display: none;
+      }
+
+      .row:before,
+      .row:after {
+          content: " "; /* 1 */
+          display: table; /* 2 */
+      }
+
+      .row:after {
+          clear: both;
+      }
+
+      .footer .col-half {
+        float: left;
+        box-sizing: border-box;
+        width: 50%;
+      }
+
+      /* =stories */
+      .story {
+        padding: 24px 0;
+        margin-top: 24px;
+      }
+      .story--2 {
+        background: #d9f0c0;
+      }
+      .story--4 {
+        background: #daede3;
+      }
+      .story--3 .slide-img img {
+        box-shadow: 0 0 10px #ccc;
+      }
+      
+      h3,
+      h4 {
+        color: #C41E3A;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 6px 0;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 0;
+      }
+      .thumbnail {
+        margin-bottom: 24px;
+      }
+
+      .cta {
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 10px 16px;
+        border: none;
+        background: #55acee;
+        color: #fff;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .cta--small {
+        font-size: 14px;
+        padding: 6px 10px;
+        border-radius: 3px;
+        background-color: #fff;
+        color: #333 !important;
+      }
+      .ft-icon {
+        width: 32px;
+      }
+
+      .align-center {
+        text-align: center;
+      }
+      .align-right {
+        text-align: right;
+      }
+      .modal-header {
+        background: #C41E3A;
+      }
+      .modal-title {
+        text-align: left;
+        color: #fff;
+        font-size: 18px;
+      }
+      .modal-footer {
+        display: none;
+      }
+      .contact-info {
+        color: #fff;
+        line-height: 16px;
+        margin-left: 1px;
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .close {
+        color: #fff;
+        border: none;
+        background: none;
+        float: right;
+        font-size: 36px;
+        line-height: 0.5;
+      }
+      #contact-btn {
+        margin-top: 24px;
+      }
+      #a666 {
+        display: none;
+      }
+      .contact-buttons {
+        text-align: left;
+        margin-top: 30px;
+      }
+      .contact-buttons h4 {
+        display: none;
+      }
+      .contact-buttons p {
+        display: inline-block;
+        margin-left: 10px;
+      }
+      
     }
 
+    @media only screen 
+    and (min-width : 768px) {
       * {
         margin: 0;
         padding: 0;
@@ -65,7 +197,7 @@
       }
       .container {
         box-sizing: border-box;
-        width: 960px;
+        width: 1140px;
         margin: auto;
         padding: 0 30px;
       }
@@ -114,16 +246,18 @@
       .col {
         float: left;
         box-sizing: border-box;
+        position: relative;
       }
       .col-half {
         width: 50%;
+        padding: 0 30px;
       }
-      .col-half:first-child {
+      /*.col-half:first-child {
         padding-right: 30px;
       }
       .col-half:last-child {
         padding-left: 30px;
-      }
+      }*/
       .col-third {
         width: 33%;
         padding: 0 30px 48px;
@@ -152,23 +286,31 @@
         background: #f2f1eb;
       }
 
-      .story:nth-child(odd) .slide-img {
+      /*.story:nth-child(odd) .slide-img {
         margin-right: -120px;
       }
       .story:nth-child(even) .slide-img {
         margin-left: -120px;
-      }
+      }*/
       .slide-img img {
         width: 100%;
       }
 
-      .story--1 .slide-img {
-        margin-top: 30px;
+      .story--1 .media-img,
+      .story--3 .media-img {
+        left: 50%;
       }
+      .story--1 .media-content,
+      .story--3 .media-content {
+        left: -50%;
+      }
+
+      /*.story--1 .slide-img {
+        margin-top: 30px;
+      }*/
       .story--2 .slide-img img,
       .story--4 .slide-img img {
         width: 420px;
-        margin-left: 120px;
       }
       .story--3 .slide-img img {
         box-shadow: 0 0 10px #ccc;
@@ -177,8 +319,8 @@
       .thumbnail {
         overflow: hidden;
         border-bottom: 1px solid #ccc;
-        width: 237px;
-        height: 252px;
+        width: 316px;
+        height: 274px;
       }
       .thumbnail h3 {
         margin-bottom: 10px;
@@ -253,11 +395,6 @@
         font-size: 18px;
         line-height: 1.5;
       }
-      hr {
-        border: 1px solid #ccc;
-        border-width: 1px 0 0 0;
-        margin: 0;
-      }
 
       .align-center {
         text-align: center;
@@ -302,17 +439,18 @@
       }
       #a666 {
         display: none;
-      }
+      } 
+    }
     </style>
   </head>
   <body>
       <div class="header">
           <div class="row">
-            <div class="col col-half">
-              <img src="images/cloudaria.png" width="160" alt="" class="logo">
+            <div class="col col-half logo">
+              <img src="images/cloudaria.png" width="160" alt="" class="logo-img">
             </div>
 
-            <div class="col col-half align-right links">
+            <div class="col col-half align-right links top-links">
               <a href="http://blog.cloudaria.io">Blog</a>
               <a href="http://voices.cloudaria.io">Customer Login</a>
               <a href="" class="cta cta--small" data-toggle="modal" data-target="#request">request a demo</a>
@@ -332,13 +470,14 @@
 
           <section class="story story--1">
             <div class="container row">
-              <div class="col col-half">
-                <h2>Socially Wired Brand Publishing</h2>
-                <p>VOICES enables brands and publishers create stunning digital content experiences that work seamlessly across all screens - from mobile devices to billboards. Our visual marketing automation platform makes it possible to discover, organize, obtain consent and publish owned and earned content at every customer touch point.</p>
+
+              <div class="col col-half media-img">
+                <div class="slide-img"><img src="images/slide-1.png" alt=""></div>
               </div>
 
-              <div class="col col-half">
-                <div class="slide-img"><img src="images/slide-1.png" alt=""></div>
+              <div class="col col-half media-content">
+                <h2>Socially Wired Brand Publishing</h2>
+                <p>VOICES enables brands and publishers create stunning digital content experiences that work seamlessly across all screens - from mobile devices to billboards. Our visual marketing automation platform makes it possible to discover, organize, obtain consent and publish owned and earned content at every customer touch point.</p>
               </div>
             </div>
           </section>
@@ -358,14 +497,16 @@
 
           <section class="story story--3">
             <div class="container row">
-              <div class="col col-half">
+
+              <div class="col col-half media-img">
+                <div class="slide-img"><img src="images/slide-3.jpg" alt=""></div>
+              </div>
+
+              <div class="col col-half media-content">
                 <h2>Analyze ROI for each social signal</h2>
                 <p>For each piece of content and each of your channels, examine actionable analytics - from reach, engagement and distribution to what’s driving conversion and commerce. VOICES combines the social signals of all your key social networks to identify what matters for your brand.</p>
               </div>
 
-              <div class="col col-half">
-                <div class="slide-img"><img src="images/slide-3.jpg" alt=""></div>
-              </div>
             </div>
           </section>
 
@@ -382,8 +523,6 @@
 
             </div>
           </section>
-
-          <hr>
 
           <section>
             <div class="container">
@@ -441,7 +580,7 @@
         <div class="container">
           <h1>Ready to take us for a spin?</h1>
           <p><button class="cta" data-toggle="modal" data-target="#request">request a demo</button></p>
-          <div class="row">
+          <div class="row contact-buttons">
             <div class="col col-third text-center contact-block">
               <img src="images/email.png" class="ft-icon" alt="">
               <h4>Email</h4>
