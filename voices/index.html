@@ -2,12 +2,12 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>admin</title>
-    <meta name="description" content="">
+    <title>Voices - Visual Content Engine for Brands</title>
+    <meta name="description" content="Smarter Marketing for the Visual Web">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap.min.css">
     <!-- <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'> -->
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
     <style>
       * {
         margin: 0;
@@ -56,8 +56,14 @@
         padding: 10px 30px;
       }
 
-      .row {
-        overflow: hidden;
+      .row:before,
+      .row:after {
+          content: " "; /* 1 */
+          display: table; /* 2 */
+      }
+
+      .row:after {
+          clear: both;
       }
       .col {
         float: left;
@@ -100,18 +106,41 @@
         background: #f2f1eb;
       }
 
+      .story:nth-child(odd) .slide-img {
+        margin-right: -120px;
+      }
+      .story:nth-child(even) .slide-img {
+        margin-left: -120px;
+      }
+      .slide-img img {
+        width: 100%;
+      }
+
+      .story--1 .slide-img {
+        margin-top: 30px;
+      }
+      .story--2 .slide-img img,
+      .story--4 .slide-img img {
+        width: 420px;
+        margin-left: 120px;
+      }
+      .story--3 .slide-img img {
+        box-shadow: 0 0 10px #ccc;
+      }
+
       .thumbnail {
-        width: 364px;
-        height: 343px;
         overflow: hidden;
-        border-bottom: 1px solid #444;
+        border-bottom: 1px solid #ccc;
+        width: 237px;
+        height: 252px;
       }
       .thumbnail h3 {
         margin-bottom: 10px;
       }
       .thumbnail img {
-        border: 1px solid #444;
+        border: 1px solid #ccc;
         border-bottom-width: 0;
+        border-radius: 3px;
       }
 
       .desc {
@@ -152,21 +181,23 @@
         font-size: 60px;
         text-shadow: 0 1px 6px #000;
         margin-bottom: 36px;
-        font-weight: 900;
+        font-weight: 600;
       }
       h2 {
         font-family: "Source Sans Pro",Helvetica, arial,sans-serif;
         font-size: 36px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 1.2;
         color: #444;
         margin: 24px 0 30px;
       }
       h3,
       h4 {
-        text-transform: uppercase;
         color: #C41E3A;
-        font-size: 12px;
+        text-transform: uppercase;
+        font-size: 18px;
+        padding: 6px 0;
+        font-weight: 600;
         text-align: center;
       }
       h4 {
@@ -189,12 +220,28 @@
         text-align: right;
       }
 
+      .modal-dialog {
+        top: 38px;
+      }
       .modal-header {
         background: #C41E3A;
       }
       .modal-title {
         text-align: left;
         color: #fff;
+        font-size: 18px;
+      }
+      .modal-footer {
+        background: #333;
+        color; #fff;
+      }
+      .contact-info {
+        color: #fff;
+        line-height: 16px;
+        margin-left: 1px;
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: middle;
       }
       .close {
         color: #fff;
@@ -203,6 +250,12 @@
         float: right;
         font-size: 36px;
         line-height: 0.5;
+      }
+      #contact-btn {
+        margin-top: 24px;
+      }
+      #a666 {
+        display: none;
       }
     </style>
   </head>
@@ -221,125 +274,121 @@
           </div>
       </div>
       <div class="hero">
-        <h1>Smarter Marketing for the Visual Web</h1>
-        <p class="desc">Visual content is eating the web, with 1.8B+ images being shared daily. <br>VOICES by cloudaria gives you the power to unlock these visual conversations, curate them, <br> and amplify them at social scale.</p>
+        <h1>Visual Content Engine for Brands</h1>
+        <p class="desc">
+        Increasingly, your customers are communicating in pictures, not words. <br>
+        VOICES by cloudaria helps you unlock these visual conversations and tell powerful <br>
+        stories <br>
+        with images and videos, across all touch points.
+        </p>
         <button class="cta" data-toggle="modal" data-target="#request">request a demo</button>
       </div>
       <div class="main">
 
-          <section class="story story--1 row">
-            <div class="container">
+          <section class="story story--1">
+            <div class="container row">
               <div class="col col-half">
                 <h2>Socially Wired Brand Publishing</h2>
-                <p>VOICES enables brands and media companies create stunning digital content experiences that are participatory, data-driven and works seamlessly across all screens. From hashtag campaigns and user generated content galleries to social hubs and brand magazines, VOICES helps you create unique content mashups for information discovery, engagement and commerce.</p>
+                <p>VOICES enables brands and publishers create stunning digital content experiences that work seamlessly across all screens - from mobile devices to billboards. Our visual marketing automation platform makes it possible to discover, organize, obtain consent and publish owned and earned content at every customer touch point.</p>
               </div>
 
               <div class="col col-half">
-                <img src="images/slide-1.png" alt="">
+                <div class="slide-img"><img src="images/slide-1.png" alt=""></div>
               </div>
             </div>
           </section>
 
-          <section class="story story--2 row">
-            <div class="container">
+          <section class="story story--2">
+            <div class="container row">
               <div class="col col-half">
-                <img src="images/slide-2.jpg" alt="">
+                <div class="slide-img"><img src="images/slide-2.jpg" alt=""></div>
               </div>
 
               <div class="col col-half">
                 <h2>Make user images shoppable</h2>
-                <p>User-generated Content (UGC) is changing the way people discover content and purchase products and services. Our UGC Rights Management ensures you bring user-generated images from across the social web to your site, collaborate with brand enthusiasts to tell your story and make those images shoppable, seamlessly. Celebrate fans, drive revenue.</p>
+                <p>Shoppers use and trust customer photos, more than brand/retailer photos. Our UGC Rights Management ensures you bring user-generated images from across the social web to your site and make those images shoppable, seamlessly. Celebrate fans, drive revenue.</p>
               </div>
             </div>
           </section>
 
-          <section class="story story--3 row">
-            <div class="container">
+          <section class="story story--3">
+            <div class="container row">
               <div class="col col-half">
                 <h2>Analyze ROI for each social signal</h2>
-                <p>For each piece of content and each of your channels, examine actionable analytics – from reach, engagement and distribution to what’s driving conversion and commerce, both at seed and viral levels. VOICES combines the social signals of all your key social networks to identify what matters for your brand.</p>
+                <p>For each piece of content and each of your channels, examine actionable analytics - from reach, engagement and distribution to what’s driving conversion and commerce. VOICES combines the social signals of all your key social networks to identify what matters for your brand.</p>
               </div>
 
               <div class="col col-half">
-                <img src="images/slide-3.jpg" alt="">
+                <div class="slide-img"><img src="images/slide-3.jpg" alt=""></div>
               </div>
             </div>
           </section>
 
-          <section class="story story--4 row">
-            <div class="container">
+          <section class="story story--4">
+            <div class="container row">
               <div class="col col-half">
-                <img src="images/slide-4.jpg" alt="">
+                <div class="slide-img"><img src="images/slide-5.png" alt=""></div>
               </div>
 
               <div class="col col-half">
-                <h2>Activate influencers and advocates</h2>
-                <p>The VOICES software combs through millions of data points and gives you the ability to not only listen but also join any relevant visual conversation across the social web. Use data to find your most ardent fans, determine their advocacy and influence, invite them to collaborate, or celebrate them in unique ways.</p>
-              </div>
-            </div>
-          </section>
-
-          <section class="story story--5 row">
-            <div class="container">
-              <div class="col col-half">
-                <h2>The Visual Marketing Innovation Platform</h2>
-                <p>Cloudaria is your system of record for visual marketing. With our customizable promotions, marketing teams save time, grow brand affinity and generate more sales. VOICES automates key marketing tasks from creating and sourcing content, moderation, publishing and analytics. Create brilliant promotions on Instagram, Pinterest or Twitter, jumpstart your brand’s presence on the visual web and increase referral traffic. </p>
+                <h2>The Marketing Suite for the Visual Web</h2>
+                <p>VOICES by cloudaria helps brands and publishers tell powerful stories with visual media. With our visual marketing automation platform, marketing teams easily overcome the challenges to effectively use fan content, dramatically cut down content creation costs, save time, drive brand affinity and increase referral traffic.</p>
               </div>
 
-              <div class="col col-half">
-                <img src="images/slide-5.png" alt="">
-              </div>
             </div>
           </section>
 
           <hr>
 
           <section>
-            <h2 class="align-center">Use cases</h2>
-            <div class="row">
-              <div class="col col-third">
-                <div class="thumbnail">
-                  <h3>Photo Galleries / Hashtag contests</h3>
-                  <img src="images/photo-gallery.jpg" alt="">
+            <div class="container">
+              <h2 class="align-center">Use cases</h2>
+              <div class="row">
+                <div class="col col-third">
+                  <div class="thumbnail">
+                    <h3>Photo Galleries</h3>
+                    <img src="images/photo-gallery.jpg" alt="">
+                  </div>
+                </div>
+
+                <div class="col col-third">
+                  <div class="thumbnail">
+                    <h3>social hubs</h3>
+                    <img src="images/2.jpg" alt="">
+                  </div>
+                </div>
+
+                <div class="col col-third">
+                  <div class="thumbnail">
+                    <h3>social commerce</h3>
+                    <img src="images/product-page-widget.png" alt="">
+                  </div>
                 </div>
               </div>
-
-              <div class="col col-third">
-                <div class="thumbnail">
-                  <h3>social hubs</h3>
-                  <img src="images/2.jpg" alt="">
+              <div class="row">
+                <div class="col col-third">
+                  <div class="thumbnail">
+                    <h3>event displays</h3>
+                    <img src="images/live-display.png" alt="">
+                  </div>
                 </div>
-              </div>
 
-              <div class="col col-third">
-                <div class="thumbnail">
-                  <h3>social commerce</h3>
-                  <img src="images/product-page-widget.png" alt="">
+                <div class="col col-third">
+                  <div class="thumbnail">
+                    <h3>brand magazines</h3>
+                    <img src="images/brand-magazine.png" alt="">
+                  </div>
+                </div>
+
+                <div class="col col-third">
+                  <div class="thumbnail">
+                    <h3>UGC banner ads</h3>
+                    <img src="images/social-banner-ad.png" alt="">
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col col-third">
-                <div class="thumbnail">
-                  <h3>retail / event displays</h3>
-                  <img src="images/live-display.png" alt="">
-                </div>
-              </div>
 
-              <div class="col col-third">
-                <div class="thumbnail">
-                  <h3>brand magazines</h3>
-                  <img src="images/brand-magazine.png" alt="">
-                </div>
-              </div>
-
-              <div class="col col-third">
-                <div class="thumbnail">
-                  <h3>UGC banner ads</h3>
-                  <img src="images/social-banner-ad.png" alt="">
-                </div>
-              </div>
-            </div>
           </section>
 
       </div>
@@ -380,7 +429,7 @@
       </div>
 
       <div class="modal" id="request">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-sm">
           <div class="modal-content">
 
             <div class="modal-header">
@@ -411,10 +460,14 @@
                   <label for="name">Phone</label>
                   <input name="name" id="name" type="phone" required class="form-control">
                 </div>
+                <input type="text" name="age" id="a666">
 
-                <button type="submit" class="btn btn-primary">submit</button>
+                <button type="submit" class="btn btn-primary btn-block btn-lg" id="contact-btn">submit</button>
               </form>
 
+            </div>
+            <div class="modal-footer">
+              <img src="images/email.png" width="16" alt="email:"> <span class="contact-info">hello@cloudaria.io</span><img src="images/phone.png" width="16" alt="phone:"> <span class="contact-info">+91 99161 01292</span>
             </div>
           </div>
         </div>
