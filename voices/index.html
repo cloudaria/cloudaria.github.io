@@ -629,27 +629,27 @@ stories with images and videos, across all touch points." />
             </div>
 
             <div class="modal-body">
-              <form>
+              <form id="contact-form" action="http://api.cloudaria.io/cont" method="POST">
                 <div class="form-group">
                   <label for="name">Name</label>
                   <input name="name" id="name" type="text" required class="form-control">
                 </div>
 
                 <div class="form-group">
-                  <label for="name">Company</label>
-                  <input name="name" id="name" type="text" required class="form-control">
+                  <label for="company">Company</label>
+                  <input name="company" id="company" type="text" required class="form-control">
                 </div>
 
 
                 <div class="form-group">
-                  <label for="name">Email</label>
-                  <input name="name" id="name" type="email" required class="form-control">
+                  <label for="email">Email</label>
+                  <input name="email" id="email" type="email" required class="form-control">
                 </div>
 
 
                 <div class="form-group">
-                  <label for="name">Phone</label>
-                  <input name="name" id="name" type="phone" required class="form-control">
+                  <label for="phone">Phone</label>
+                  <input name="phone" id="phone" type="phone" required class="form-control">
                 </div>
                 <input type="text" name="age" id="a666">
 
@@ -664,7 +664,16 @@ stories with images and videos, across all touch points." />
         </div>
       </div>
 
-      <script src="jquery.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.50/jquery.form.min.js"></script>
       <script src="bootstrap.min.js"></script>
+      <script>
+        $(document).ready(function() {
+          var form = $('#contact-form');
+          form.ajaxForm(function() {
+            form.html('<p>Thanks for your interest. We will get in touch with you shortly.</p>');
+          });
+        });
+      </script>
   </body>
 </html>
