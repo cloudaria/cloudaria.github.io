@@ -18,12 +18,14 @@
 <body>
   <div class="container">
     <h1>header</h1>
-    <div id="cloudaria-overlay" style="display:none;position:fixed;top:0;background: #fff;z-index:9999;right:0;left:0;bottom:0;margin:auto;box-shadow: 0 0 800px #000;">
-      <button class="cloudaria-embed-close" style="position:absolute;right:-0;top:0;margin: 10px;font-size:48px;line-height:1;font-family:monospace;color:#c41e3a;border: none;border-radius:50%;width:48px;height:48px;display:block;z-index:2;cursor:pointer;">×</button>
-      <p style="position: absolute;text-align:center;top:300px;width:100%;font-size:24px;color:#999;">Fetching content…</p>
-      <iframe frameborder="0" width="100%" height="100%" style="position:relative;z-index:1;"></iframe>
+    <div id="cloudaria-overlay" style="position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0; margin-left:100%; background: #fff;transition: margin 0.35s ease-in-out, opacity 0.7s linear;">
+      <i class="cloudaria-embed-close" style="cursor: pointer; font-family: monospace; font-size: 54px; line-height: 1; color: rgb(255, 255, 255); font-style: normal; width: 70px; text-align: center; display: block; color:#c41e3a;position:absolute;top:0;left:0;z-index:10;">←</i>
+      <div style="position: absolute;text-align:center;top:300px;width:100%;font-size:24px;color:#999;">
+        <p class="small-loading">Fetching Content&hellip;</p>
+      </div>
+      <iframe frameborder="0" width="100%" height="100%" style="position:relative;z-index:1;padding-bottom:54px;"></iframe>
     </div>
-    <iframe id="cloudaria-frame" src="http://localhost:3000/feed-embed/13" frameborder="0" width="100%" height="1000px"></iframe>
+    <iframe id="cloudaria-frame" src="http://localhost:3000/feed-embed/13?type=feed" frameborder="0" width="100%" height="1000px"></iframe>
     <script>
     var iframe = document.getElementById('cloudaria-frame');
     window.addEventListener('message', function(event) {
@@ -32,13 +34,13 @@
         iframe.height = event.data.value + 100;
       }
       if(event.data.name == 'url') {
-        $('#cloudaria-overlay iframe').attr('src',event.data.value);
-        $('#cloudaria-overlay').fadeIn(400);
+        $('#cloudaria-overlay iframe').attr('src',event.data.value + '?mode=reader');
+        $('#cloudaria-overlay').css({"opacity":1,"margin-left": 0});
         $('body').css('overflow','hidden');
       }
     }, false);
     $(document).on('click','.cloudaria-embed-close',function() {
-      $('#cloudaria-overlay').fadeOut();
+      $('#cloudaria-overlay').css({"opacity": 0,"margin-left": "100%"});
       $('body').css('overflow','auto');
       $('#cloudaria-overlay iframe').removeAttr('src');
     });
