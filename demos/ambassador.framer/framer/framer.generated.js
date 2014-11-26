@@ -175,7 +175,7 @@ window.__imported__["employee-app/layers.json.js"] = [
 		"children": [
 			
 		],
-		"modification": "1228557117"
+		"modification": "1687109061"
 	},
 	{
 		"id": 61,
@@ -191,16 +191,16 @@ window.__imported__["employee-app/layers.json.js"] = [
 			"path": "images/intro3.png",
 			"frame": {
 				"x": 151,
-				"y": 657,
+				"y": 549,
 				"width": 356,
-				"height": 207
+				"height": 315
 			}
 		},
 		"imageType": "png",
 		"children": [
 			
 		],
-		"modification": "1794285504"
+		"modification": "255100448"
 	},
 	{
 		"id": 59,
@@ -216,16 +216,16 @@ window.__imported__["employee-app/layers.json.js"] = [
 			"path": "images/intro2.png",
 			"frame": {
 				"x": 73,
-				"y": 657,
+				"y": 545,
 				"width": 512,
-				"height": 207
+				"height": 319
 			}
 		},
 		"imageType": "png",
 		"children": [
 			
 		],
-		"modification": "1410981960"
+		"modification": "1044682320"
 	},
 	{
 		"id": 55,
@@ -241,16 +241,16 @@ window.__imported__["employee-app/layers.json.js"] = [
 			"path": "images/intro1.png",
 			"frame": {
 				"x": 98,
-				"y": 657,
+				"y": 553,
 				"width": 464,
-				"height": 207
+				"height": 311
 			}
 		},
 		"imageType": "png",
 		"children": [
 			
 		],
-		"modification": "227257068"
+		"modification": "627969331"
 	},
 	{
 		"id": 116,
@@ -450,7 +450,7 @@ window.__imported__["employee-app/layers.json.js"] = [
 		"children": [
 			
 		],
-		"modification": "874671826"
+		"modification": "2101284338"
 	},
 	{
 		"id": 164,
