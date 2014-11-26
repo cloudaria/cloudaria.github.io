@@ -38,7 +38,7 @@ home = new Layer
 	y:1064,
 	height: 80,
 	width: 80,
-	backgroundColor: 'transparent'
+	backgroundColor: '#c41e3a'
 search = new Layer
 	height: 80,
 	width: 80,
@@ -136,17 +136,20 @@ article_link.on Events.Click, ->
 home.on Events.Click, ->
 	app.search.x = -10000
 	app.inspire.x = -10000
+	app.plus.x = -10000
 	app.home.center()
 	article_link.x = 0
 	
 search.on Events.Click, ->
 	app.home.x = -10000
+	article_link.x = -10000
 	app.inspire.x = -10000
 	app.plus.x = -10000
 	app.search.center()
 	
 inspire.on Events.Click, ->
 	app.home.x = -10000
+	article_link.x = -10000
 	app.search.x = -10000
 	app.plus.x = -10000
 	app.inspire.center()
@@ -159,6 +162,7 @@ back.on Events.Click, ->
 
 plus.on Events.Click, ->
 	app.home.x = -10000
+	article_link.x = -10000
 	app.search.x = -10000
 	app.inspire.x = -10000
 	app.plus.center()
