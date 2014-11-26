@@ -1,10 +1,12 @@
 CACHE MANIFEST
-# 1417006473.016692
+# 1417016430.609359
 CACHE:
 /_server/server.js
+../.DS_Store
 ../.temp.html
 ../app.coffee
 ../framer/.bowerrc
+../framer/.DS_Store
 ../framer/app.manifest
 ../framer/backup.coffee
 ../framer/coffee-script.js
@@ -30,19 +32,26 @@ CACHE:
 ../framer/mirror.css
 ../framer/style.css
 ../framer/version
+../images/camera-50.png
 ../images/framer-icon.png
+../images/left-50.png
+../images/share.png
+../imported/.DS_Store
+../imported/employee-app/.DS_Store
 ../imported/employee-app/framerps.log
 ../imported/employee-app/images/article.png
 ../imported/employee-app/images/background.png
 ../imported/employee-app/images/following1.png
 ../imported/employee-app/images/following2.png
 ../imported/employee-app/images/home.png
+../imported/employee-app/images/inspire.png
 ../imported/employee-app/images/intro.png
 ../imported/employee-app/images/intro1.png
 ../imported/employee-app/images/intro2.png
 ../imported/employee-app/images/intro3.png
 ../imported/employee-app/images/intro4.png
 ../imported/employee-app/images/next.png
+../imported/employee-app/images/plus.png
 ../imported/employee-app/images/search.png
 ../imported/employee-app/images/splash.png
 ../imported/employee-app/images/topics.png

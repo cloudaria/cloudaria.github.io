@@ -72,7 +72,7 @@
 		"children": [
 			
 		],
-		"modification": "1037129092"
+		"modification": "1228557117"
 	},
 	{
 		"id": 61,
@@ -322,6 +322,56 @@
 		"children": [
 			
 		],
-		"modification": "988111112"
+		"modification": "746170164"
+	},
+	{
+		"id": 162,
+		"name": "inspire",
+		"layerFrame": {
+			"x": 0,
+			"y": 0,
+			"width": 640,
+			"height": 1136
+		},
+		"maskFrame": null,
+		"image": {
+			"path": "images/inspire.png",
+			"frame": {
+				"x": 0,
+				"y": 0,
+				"width": 640,
+				"height": 1136
+			}
+		},
+		"imageType": "png",
+		"children": [
+			
+		],
+		"modification": "874671826"
+	},
+	{
+		"id": 164,
+		"name": "plus",
+		"layerFrame": {
+			"x": 0,
+			"y": 0,
+			"width": 640,
+			"height": 1136
+		},
+		"maskFrame": null,
+		"image": {
+			"path": "images/plus.png",
+			"frame": {
+				"x": 0,
+				"y": 0,
+				"width": 640,
+				"height": 1136
+			}
+		},
+		"imageType": "png",
+		"children": [
+			
+		],
+		"modification": "290660591"
 	}
 ]

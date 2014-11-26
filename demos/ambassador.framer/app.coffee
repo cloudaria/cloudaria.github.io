@@ -51,6 +51,24 @@ inspire = new Layer
 	x: 416,
 	y: 1064,
 	backgroundColor: 'transparent'
+	
+plus = new Layer
+	height: 80,
+	width: 80,
+	y: 1064,
+	backgroundColor: 'transparent'
+plus.centerX()
+
+back = new Layer
+	x:-10000,
+	image:"images/left-50.png"
+	
+share = new Layer
+	x:-10000,
+	y: 20,
+	image: "images/share.png",
+	height: 50,
+	width: 36
 
 app.intro2.x = -10000
 app.intro3.x = -10000
@@ -62,6 +80,8 @@ app.next.x = -10000
 app.home.x = -10000
 app.article.x = -10000
 app.search.x = -10000
+app.plus.x = -10000
+app.inspire.x = -10000
 
 app.intro1.on Events.Click, ->
 	this.x = -10000
@@ -110,12 +130,35 @@ article_link.on Events.Click, ->
 	this.x = -10000
 	app.home.x = -10000
 	app.article.center()
+	back.x = 0
+	share.x = 580
 
 home.on Events.Click, ->
 	app.search.x = -10000
+	app.inspire.x = -10000
 	app.home.center()
 	article_link.x = 0
 	
 search.on Events.Click, ->
 	app.home.x = -10000
+	app.inspire.x = -10000
+	app.plus.x = -10000
 	app.search.center()
+	
+inspire.on Events.Click, ->
+	app.home.x = -10000
+	app.search.x = -10000
+	app.plus.x = -10000
+	app.inspire.center()
+	
+back.on Events.Click, ->
+	this.x = -10000
+	share.x = -10000
+	app.home.center()
+	article_link.x = 0
+
+plus.on Events.Click, ->
+	app.home.x = -10000
+	app.search.x = -10000
+	app.inspire.x = -10000
+	app.plus.center()
