@@ -119,6 +119,20 @@ feed_container = new Layer
 	backgroundColor: 'transparent',
 	superLayer: body
 
+search = new Layer
+	originX: 1,
+	rotationY: 90,
+	width: 640,
+	height: 1038,
+	image: 'images/search.png'
+	superLayer: body
+search.states.add
+	show: {rotationY:0}
+search.states.animationOptions =
+	curve: "spring(600,30,0)"
+btn_search.on Events.Click, ->
+	search.states.switch("show")
+
 article = new Layer
 	width: 620,
 	height: 953,
@@ -181,15 +195,18 @@ article_2 = new Layer
 	x: 640,
 	width: 640,
 	height: 1136,
+	image: 'images/article_2.png',
 	backgroundColor: 'transparent',
 	superLayer: card_container
 
 tweet_2 = new Layer
 	x: 640,
 	width: 640,
-	height: 1136,
+	height: 315,
+	image: 'images/tweet.png'
 	backgroundColor: 'transparent',
 	superLayer: card_container
+tweet_2.center()
 
 youtube_2 = new Layer
 	x: 640,
