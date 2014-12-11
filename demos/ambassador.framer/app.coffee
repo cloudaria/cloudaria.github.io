@@ -231,6 +231,7 @@ btn_add.on Events.Click, ->
 	else
 		plus.states.switch("hide")
 		feed_container.states.switch("show")
+		btn_feed.image = 'images/btn_feed_active.png'
 		btn_add.states.switch("reset")
 		plus_is_active = false
 btn_inspire.on Events.Click, ->
