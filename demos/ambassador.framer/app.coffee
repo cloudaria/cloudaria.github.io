@@ -397,6 +397,7 @@ back.on Events.Click, ->
 	youtube_2.x = 640
 	pdf_2.x = 640
 	slideshare_2.x = 640
+	instagram_2.x = 640
 	back.states.switch("hide")
 	share.states.switch("hide")
 
