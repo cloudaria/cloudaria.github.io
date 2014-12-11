@@ -205,7 +205,7 @@ profile = new Layer
 	originX: 1,
 	rotationY: 90,
 	width: 640,
-	height: 1038,
+	height: 896,
 	image: 'images/profile.png'
 	superLayer: body
 profile.states.add
