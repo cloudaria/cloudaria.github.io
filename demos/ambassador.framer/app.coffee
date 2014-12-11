@@ -1,3 +1,4 @@
+plus_is_active = false
 app = new Layer
 	width: 640,
 	height: 1136,
@@ -134,7 +135,7 @@ btn_add = new Layer
 	image: 'images/add.png',
 	backgroundColor: 'transparent'
 btn_add.states.add
-	active: {rotationZ: 45}
+	active: {rotationZ: -45}
 	reset: {rotationZ:0}
 
 btn_add.states.animationOptions = 
@@ -216,19 +217,30 @@ profile.states.animationOptions =
 btn_feed.on Events.Click, ->
 	resetButtons()
 	feed_container.states.switch("show")
+	btn_feed.image = 'images/btn_feed_active.png'
 btn_search.on Events.Click, ->
 	resetButtons()
 	search.states.switch("show")
+	btn_search.image = 'images/btn_search_active.png'
 btn_add.on Events.Click, ->
 	resetButtons()
-	plus.states.switch("show")
-	btn_add.states.switch("active")
+	if(!plus_is_active)
+		plus.states.switch("show")
+		btn_add.states.switch("active")
+		plus_is_active = true
+	else
+		plus.states.switch("hide")
+		feed_container.states.switch("show")
+		btn_add.states.switch("reset")
+		plus_is_active = false
 btn_inspire.on Events.Click, ->
 	resetButtons()
 	inspire.states.switch("show")
+	btn_inspire.image = 'images/btn_inspire_active.png'
 btn_profile.on Events.Click, ->
 	resetButtons()
 	profile.states.switch("show")
+	btn_profile.image = 'images/btn_profile_active.png'
 
 article = new Layer
 	width: 620,
@@ -414,3 +426,7 @@ resetButtons = () ->
 	inspire.states.switch("hide")
 	profile.states.switch("hide")
 	btn_add.states.switch("reset")
+	btn_feed.image = 'images/btn_feed.png'
+	btn_search.image = 'images/btn_search.png'
+	btn_inspire.image = 'images/btn_inspire.png'
+	btn_profile.image = 'images/btn_profile.png'
