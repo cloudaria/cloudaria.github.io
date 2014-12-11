@@ -28,6 +28,15 @@ topics.states.add
 topics.states.animationOptions = 
 	curve: "spring(600,30,0)"
 topics.on Events.Click, ->
+	topics.image = 'images/topics_2.png'
+next = new Layer
+	superLayer: topics,
+	x: 426,
+	y: 50,
+	width: 150,
+	height: 70,
+	backgroundColor: 'transparent'
+next.on Events.Click, ->
 	topics.states.switch("hide")
 	main.states.switch("show")
 
@@ -56,10 +65,37 @@ back = new Layer
 	width: 120,
 	image: 'images/back.png'
 
+share = new Layer
+	x:520,
+	scale: 0,
+	height: 120,
+	width: 120,
+	image: 'images/share.png'
+
+share_2 = new Layer
+	rotationX: 90,
+	originY: 1,
+	height: 1136,
+	width: 640,
+	image: 'images/share_2.png'
+	superLayer: app
+
 back.states.add
 	hide: {scale: 0}
 	show: {scale: 1}
 back.states.animationOptions = 
+    curve: "spring(600,30,0)"
+
+share.states.add
+	hide: {scale: 0}
+	show: {scale: 1}
+share.states.animationOptions = 
+    curve: "spring(600,30,0)"
+
+share_2.states.add
+	hide: {rotationX: 90}
+	show: {rotationX: 0}
+share_2.states.animationOptions = 
     curve: "spring(600,30,0)"
 
 toolbar = new Layer
@@ -97,6 +133,12 @@ btn_add = new Layer
 	superLayer: toolbar,
 	image: 'images/add.png',
 	backgroundColor: 'transparent'
+btn_add.states.add
+	active: {rotationZ: 45}
+	reset: {rotationZ:0}
+
+btn_add.states.animationOptions = 
+	curve: "spring(600,30,0)"
 
 btn_profile = new Layer
 	width: 128,
@@ -128,10 +170,65 @@ search = new Layer
 	superLayer: body
 search.states.add
 	show: {rotationY:0}
+	hide: {rotationY: 90}
 search.states.animationOptions =
 	curve: "spring(600,30,0)"
+
+plus = new Layer
+	originX: 1,
+	rotationY: 90,
+	width: 640,
+	height: 896,
+	image: 'images/plus.png'
+	superLayer: body
+plus.states.add
+	show: {rotationY:0}
+	hide: {rotationY: 90}
+plus.states.animationOptions =
+	curve: "spring(600,30,0)"
+
+inspire = new Layer
+	originX: 1,
+	rotationY: 90,
+	width: 640,
+	height: 1016,
+	image: 'images/inspire.png'
+	superLayer: body
+inspire.states.add
+	show: {rotationY:0}
+	hide: {rotationY: 90}
+inspire.states.animationOptions =
+	curve: "spring(600,30,0)"
+
+profile = new Layer
+	originX: 1,
+	rotationY: 90,
+	width: 640,
+	height: 1038,
+	image: 'images/profile.png'
+	superLayer: body
+profile.states.add
+	show: {rotationY:0}
+	hide: {rotationY: 90}
+profile.states.animationOptions =
+	curve: "spring(600,30,0)"
+
+btn_feed.on Events.Click, ->
+	resetButtons()
+	feed_container.states.switch("show")
 btn_search.on Events.Click, ->
+	resetButtons()
 	search.states.switch("show")
+btn_add.on Events.Click, ->
+	resetButtons()
+	plus.states.switch("show")
+	btn_add.states.switch("active")
+btn_inspire.on Events.Click, ->
+	resetButtons()
+	inspire.states.switch("show")
+btn_profile.on Events.Click, ->
+	resetButtons()
+	profile.states.switch("show")
 
 article = new Layer
 	width: 620,
@@ -206,7 +303,6 @@ tweet_2 = new Layer
 	image: 'images/tweet.png'
 	backgroundColor: 'transparent',
 	superLayer: card_container
-tweet_2.center()
 
 youtube_2 = new Layer
 	x: 640,
@@ -228,6 +324,7 @@ instagram_2 = new Layer
 	x: 640,
 	width: 640,
 	height: 1136,
+	image: 'images/instagram_2.png'
 	backgroundColor: 'transparent',
 	superLayer: card_container
 
@@ -255,36 +352,42 @@ article.on Events.Click, ->
 	feed_container.states.switch("hide")
 	article_2.x = 0
 	back.states.switch("show")
+	share.states.switch("show")
 
 tweet.on Events.Click, ->
 	card_container.states.switch("show")
 	feed_container.states.switch("hide")
-	tweet_2.x = 0
+	tweet_2.center()
 	back.states.switch("show")
+	share.states.switch("show")
 
 youtube.on Events.Click, ->
 	card_container.states.switch("show")
 	feed_container.states.switch("hide")
 	youtube_2.x = 0
 	back.states.switch("show")
+	share.states.switch("show")
 
 pdf.on Events.Click, ->
 	card_container.states.switch("show")
 	feed_container.states.switch("hide")
 	pdf_2.x = 0
 	back.states.switch("show")
+	share.states.switch("show")
 
 instagram.on Events.Click, ->
 	card_container.states.switch("show")
 	feed_container.states.switch("hide")
 	instagram_2.x = 0
 	back.states.switch("show")
+	share.states.switch("show")
 
 slideshare.on Events.Click, ->
 	card_container.states.switch("show")
 	feed_container.states.switch("hide")
 	slideshare_2.x = 0
 	back.states.switch("show")
+	share.states.switch("show")
 
 back.on Events.Click, ->
 	card_container.states.switch("hide")
@@ -295,3 +398,18 @@ back.on Events.Click, ->
 	pdf_2.x = 640
 	slideshare_2.x = 640
 	back.states.switch("hide")
+	share.states.switch("hide")
+
+share.on Events.Click, ->
+	share_2.states.switch("show")
+
+share_2.on Events.Click, ->
+	share_2.states.switch("hide")
+
+resetButtons = () ->
+	feed_container.states.switch("hide")
+	search.states.switch("hide")
+	plus.states.switch("hide")
+	inspire.states.switch("hide")
+	profile.states.switch("hide")
+	btn_add.states.switch("reset")
