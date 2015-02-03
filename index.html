@@ -1,582 +1,166 @@
-<!doctype html>
-<html class="no-js" prefix="og: http://ogp.me/ns#">
-<head>
-  <meta charset="utf-8">
-  <title>Cloudaria - Visual Content Engine for Brands</title>
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@cloudaria1">
-  <meta name="twitter:creator" content="@cloudaria1">
-  <meta name="twitter:title" content="Visual Content Engine for Brands">
-  <meta name="twitter:description" content="Cloudaria is the marketing suite for the visual web. We help brands and media companies create socially wired digital content experiences.">
-  <meta name="twitter:image:src" content="http://cloudaria.io/images/Cover-Image.jpg">
-  <meta name="description" content="Cloudaria is the marketing suite for the visual web. We help brands and media companies create socially wired digital content experiences.">
-  <link rel="shortcut icon" href="http://38.media.tumblr.com/avatar_f66ccfc11524_128.png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="http://38.media.tumblr.com/avatar_f66ccfc11524_128.png">
+    <title>Cloudaria</title>
+    
+    <meta name="title" content="Cloudaria" />
+    <meta name="description" content="Cloudaria" />
+    <link rel="image_src" href="/images/cloudaria-logo_light.png" />
 
-  <meta property="og:url" content="http://cloudaria.io" />
-  <meta property="og:title" content="Cloudaria - Visual Content Engine for Brands" />
-  <meta property="og:description" content="Cloudaria is the marketing suite for the visual web. We help brands and media companies create socially wired digital content experiences." />
-  <meta property="og:image" content="http://cloudaria.io/images/Cover-Image.jpg" />
+    <meta content="Cloudaria" property="og:title" />
+    <meta content="Cloudaria" property="og:description" />
+    <link rel="stylesheet" href="css/animate.css">
+    <meta name="HandheldFriendly" content="true" />
+  
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css">
+     
+     <link rel="stylesheet" href="css/font-awesome.css">
+     <link rel="stylesheet" href="css/theme_aria.css">
+     <link href='http://fonts.googleapis.com/css?family=Merriweather:300' rel='stylesheet' type='text/css'>
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
 
-  <link rel="stylesheet" href="bootstrap.min.css">
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
-  <style>
-  @media (min-device-width : 320px) {
-    * {
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      color: #555;
-      font-family: "Source Sans Pro","Helvetica Neue", Helvetica, Arial, sans-serif;
-    }
-    img {
-      max-width: 100%;
-    }
-
-    .header,
-    .footer {
-      background: #000;
-    }
-    .footer {
-      padding: 0 10px;
-    }
-    .container {
-      padding: 0 10px;
-    }
-
-    .links {
-      line-height: 48px;
-    }
-    .links a,
-    .links .a {
-      color: #fff;
-    }
-
-    .hero,
-    .contact {
-      background: #444 url('images/Cover-Image.jpg') no-repeat center;
-      background-size: cover;
-      color: #fff;
-      padding: 24px 0;
-      text-align: center;
-    }
-    .contact {
-      background:#444 url(images/bg-footer.jpg) no-repeat;
-    }
-
-    .logo {
-      text-align: center;
-    }
-    .top-links {
-      display: none;
-    }
-
-    .row:before,
-    .row:after {
-      content: " "; /* 1 */
-      display: table; /* 2 */
-    }
-
-    .row:after {
-      clear: both;
-    }
-
-    .footer .col-half {
-      float: left;
-      box-sizing: border-box;
-      width: 50%;
-    }
-
-    /* =stories */
-    .story {
-      padding: 24px 0;
-      margin-top: 24px;
-    }
-    .story--2 {
-      background: #d9f0c0;
-    }
-    .story--4 {
-      background: #daede3;
-    }
-
-    .slide-img {
-      text-align: center;
-    }
-
-    h1 {
-      font-weight: 600; 
-    }
-
-    h3,
-    h4 {
-      color: #C41E3A;
-      text-transform: uppercase;
-      font-size: 14px;
-      padding: 6px 0;
-      font-weight: 600;
-      text-align: center;
-      margin-bottom: 0;
-    }
-    .thumbnail {
-      margin-bottom: 24px;
-    }
-    .thumbnail img {
-      max-width: 100%;
-      box-shadow: 1px 1px 3px #ccc;
-      padding: 6px;
-    }
-
-    .use-cases {
-      margin-top: 24px;
-      margin-bottom: 48px;
-    }
-
-    h1,
-    .desc {
-      padding: 0 10px;
-    }
-    .desc {
-      margin-bottom: 48px;
-    }
-    .contact-block {
-      margin-bottom: 10px;
-    }
-    .contact-block a {
-      color: #fff;
-    }
-
-    .cta {
-      font-size: 18px;
-      font-weight: 700;
-      text-transform: uppercase;
-      padding: 10px 16px;
-      border: none;
-      background: #55acee;
-      color: #fff;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    .cta--small {
-      font-size: 14px;
-      padding: 6px 10px;
-      border-radius: 3px;
-      background-color: #fff;
-      color: #333 !important;
-    }
-    .ft-icon {
-      width: 32px;
-    }
-
-    .align-center,
-    .thumbnail {
-      text-align: center;
-    }
-    .align-right {
-      text-align: right;
-    }
-    .modal-header {
-      background: #C41E3A;
-    }
-    .modal-title {
-      text-align: left;
-      color: #fff;
-      font-size: 18px;
-    }
-    .modal-footer {
-      display: none;
-    }
-    .contact-info {
-      color: #fff;
-      line-height: 16px;
-      margin-left: 1px;
-      margin-right: 10px;
-      display: inline-block;
-      vertical-align: middle;
-    }
-    .close {
-      color: #fff;
-      border: none;
-      background: none;
-      float: right;
-      font-size: 36px;
-      line-height: 0.5;
-    }
-    #contact-btn {
-      margin-top: 24px;
-    }
-    #a666 {
-      display: none;
-    }
-    .contact-buttons {
-      text-align: left;
-      margin-top: 30px;
-    }
-    .contact-buttons h4 {
-      display: none;
-    }
-    .contact-buttons p {
-      display: inline-block;
-      margin-left: 10px;
-    }
-
-    #read-more {
-      margin-top: 40px;
-      background: url(/images/arrow.png) no-repeat center;
-      width: 100%;
-      height: 40px;
-      display: block;
-      text-align: center;
-    }
-
-  }
-  @media only screen and (min-width : 768px) {
-    .container {
-      width: 760px;
-      margin: auto;
-    }
-    h1 {
-      font-size: 60px;
-    }
-    .desc {
-      font-size: 24px;
-    }
-    h2 {
-      font-size: 36px;
-      line-height: 1.2;
-      margin-bottom: 24px;
-    }
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-    .col-half {
-      display: table-cell;
-      width: 50%;
-      vertical-align: middle;
-    }
-    .col-third {
-      float: left;
-      width:50%;
-    }
-    .media-img img {
-      width: 100%;
-    }
-    .story--1 .media-img,
-    .story--3 .media-img {
-      left: 50%;
-      position: relative;
-    }
-    .story--1 .media-content,
-    .story--3 .media-content {
-      left: -50%;
-      position: relative;
-      padding: 0 30px;
-    }
-    .header-wrap {
-      display: table;
-      width: 100%;
-    }
-    .links a,
-    .links .a {
-      line-height: 46px;
-      text-decoration: none;
-      margin-right: 30px;
-      color: #fff;
-      font-weight: 600;
-    }
-
-    .cta {
-      padding: 18px 54px;
-    }
-    .cta--small {
-      padding: 6px 10px;
-    }
-  }
-  @media only screen and (min-width : 1024px) {
-    .hero {
-      padding-top: 100px;
-      padding-bottom: 100px;
-    }
-    .container {
-      width: 1000px;
-      margin: auto;
-    }
-    .story--2,
-    .story--4 {
-      padding: 72px 0;
-    }
-    .contact-block,
-    .col-third {
-      float: left;
-      width: 33%;
-    }
-    .contact-block {
-      color: #fff;
-      margin: 60px 0;
-      text-align: center;
-    }
-    .ft-icon {
-      width: 100px;
-      margin-bottom: 30px;
-    }
-    .contact-buttons h4 {
-      display: block;
-      font-size: 18px;
-      color: #fff;
-    }
-  }
-
-  @media only screen and (min-width : 1200px) {
-    .container {
-      width: 1140px;
-    }
-  }
-
-  </style>
-</head>
-<body>
-  <div class="header">
-    <div class="row header-wrap">
-      <div class="col-half">
-        <img src="images/cloudaria.png" width="160" alt="" class="logo-img">
-      </div>
-
-      <div class="col-half align-right links top-links">
-        <a href="http://blog.cloudaria.io" target="_blank">Blog</a>
-        <a href="http://app.cloudaria.io">Customer Login</a>
-        <a class="cta cta--small" data-toggle="modal" data-target="#request">request a demo</a>
-      </div>
-    </div>
-  </div>
-  <div class="hero">
-    <h1>Visual Content Engine for Brands</h1>
-    <p class="desc">
-      You need engaging content every day, across all your channels. <br>
-      Cloudaria helps you create compelling consumer-driven stories with images and videos, <br> and amplify them across all touch points.
-    </p>
-    <button class="cta" data-toggle="modal" data-target="#request">request a demo</button>
-    <a href="#main" id="read-more"></a>
-  </div>
-  <div id="main" class="main">
-
-    <section class="story story--1">
-      <div class="container row media">
-
-        <div class="col col-half media-img">
-          <div class="slide-img"><img src="images/slide-1.png" alt=""></div>
-        </div>
-
-        <div class="col col-half media-content">
-          <h2>Socially Wired Brand Publishing</h2>
-          <p>Cloudaria enables brands and publishers create stunning digital content experiences that work seamlessly across all screens - from mobile devices to billboards. Our visual marketing automation platform makes it possible to discover, organize, obtain consent and publish owned and earned content at every customer touch point.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="story story--2">
-      <div class="container row">
-        <div class="col col-half">
-          <div class="slide-img"><img src="images/slide-2.png" alt=""></div>
-        </div>
-
-        <div class="col col-half">
-          <h2>Make user images shoppable</h2>
-          <p>Shoppers use and trust customer photos, more than brand/retailer photos. Our UGC Rights Management ensures you bring user-generated images from across the social web to your site and make those images shoppable, seamlessly. Celebrate fans, drive revenue.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="story story--3">
-      <div class="container row media">
-
-        <div class="col col-half media-img">
-          <div class="slide-img"><img src="images/slide-3.png" alt=""></div>
-        </div>
-
-        <div class="col col-half media-content">
-          <h2>Analyze ROI for each social signal</h2>
-          <p>For each piece of content and each of your channels, examine actionable analytics - from reach, engagement and distribution to what’s driving conversion and commerce. Cloudaria combines the social signals of all your key social networks to identify what matters for your brand.</p>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="story story--4">
-      <div class="container row">
-        <div class="col col-half">
-          <div class="slide-img"><img src="images/slide-5.png" alt=""></div>
-        </div>
-
-        <div class="col col-half">
-          <h2>The Marketing Suite for the Visual Web</h2>
-          <p>Cloudaria helps brands and publishers tell powerful stories with visual media. With our visual marketing automation platform, marketing teams easily overcome the challenges to effectively use fan content, dramatically cut down content creation costs, save time, drive brand affinity and increase referral traffic.</p>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="use-cases">
+  <body class="">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1&appId=386496834740212";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-fixed-top" role="navigation" style="border-bottom:1px solid #f1f1f2;">
       <div class="container">
-        <h2 class="align-center">Use cases</h2>
-        <div class="row">
-          <div class="col col-third">
-            <div class="thumbnail">
-              <h3>Photo Galleries</h3>
-              <img src="images/photo-galleries.jpg" alt="Photo Galleries">
-            </div>
-          </div>
-
-          <div class="col col-third">
-            <div class="thumbnail">
-              <h3>social hubs</h3>
-              <img src="images/social-hubs.jpg" alt="Social Hubs">
-            </div>
-          </div>
-
-          <div class="col col-third">
-            <div class="thumbnail">
-              <h3>social commerce</h3>
-              <img src="images/social-commerce.jpg" alt="Social Commerce">
-            </div>
-          </div>
-
-          <div class="col col-third">
-            <div class="thumbnail">
-              <h3>event displays</h3>
-              <img src="images/event-displays.jpg" alt="Event Displays">
-            </div>
-          </div>
-
-          <div class="col col-third">
-            <div class="thumbnail">
-              <h3>brand magazines</h3>
-              <img src="images/brand-magazines.jpg" alt="Brands Magazines">
-            </div>
-          </div>
-
-          <div class="col col-third">
-            <div class="thumbnail">
-              <h3>UGC banner ads</h3>
-              <img src="images/ugc-banner-ads.jpg" alt="UGC Banner Ads">
-            </div>
-          </div>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" class="scrollto" href="/homepage.html"><img src="images/cloudaria-logo_light.png" alt="Placeholder of Your Feature" style="max-height:55px;"></a>
         </div>
-      </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown" style="cursor:pointer;">
+                  <a class=" dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                    Products
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation"><a role="menuitem" href="/visual-commerce.html" tabindex="-1" href="#" class="helvica2">Visual Commerce</a></li>
+                    <li role="presentation"><a role="menuitem"  href="/content-experiences.html" tabindex="-1" href="#" class="helvica2">Experiences</a></li>
+                   
+                  </ul>
+                </li>
+             
+             <li><a  target="_blank" href="http://blog.cloudaria.io/">Blog</a></li>
+             <li><a  target="_blank" href="https://app.cloudaria.io/">Login</a></li>
+             <li><a class="btn  fus-btn-white btn-grey-aria" href="/contactus.html" >REQUEST A DEMO</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div><!--/.container -->
+    </div>
+  
+    
+ 
 
-    </section>
+    <div class="fus-section fus-feature fus-white-bg " style=
+    "padding-top:100px;padding-bottom:60px;"; >
+      <div class="container">
+        
+        
+            <div class="row">
+              
+              <div class="col-md-7">
+                <div class="fus-tab-center animated fadeIn">
+                  <div class="fus-header">
+                    <h3 class="georgia light-grey home-heading" >Content Innovation for the Enterprise</h3>
+                  </div>
+                  <p class="home-description" style="">
+                   Our mission is to help brands, publishers and teams create content people love. We are building a platform to help them discover, curate and publish content experiences that’s interesting, relevant and timely for their customers.</p>
+                <div class="row" style="vertical-align:top;">
+                <div class="col-md-5 col-sm-12 col-xs-12 text-center"> 
+                  <a href="/content-experiences.html" target="_blank" class="btn btn-lg btn-homepage" style="margin-top:30px;"> <i class="fa fa-newspaper-o" style="margin-right:10px;"></i>Experiences</a>
+                </div>
+                   <div class="col-md-5 col-sm-12 col-xs-12 text-center"> 
+                    <a href="/visual-commerce.html" target="_blank" class="btn btn-lg btn-homepage" style="margin-top:30px;"><i class="fa fa-camera-retro" style="margin-right:10px;"></i>Visual Commerce</a>
+                  </div>
+              </div>
+                </div>
+              </div>
+              <div class="col-md-5 ">
+                  <img class="image-carousel" src="images/cropped_image-type.jpg" style="display:inline-block;max-height:450px;" alt="Placeholder of Your Feature">
+              
+              </div>
+              
+            </div>
+          </div>
+         
+        </div>
+        
 
-  </div>
-  <div class="contact">
-    <div class="container">
-      <h1>Ready to take us for a spin?</h1>
-      <p><button class="cta" data-toggle="modal" data-target="#request">request a demo</button></p>
-      <div class="row contact-buttons">
-        <div class="text-center contact-block">
-          <img src="images/email.png" class="ft-icon" alt="">
-          <h4>Email</h4>
-          <p>hello@cloudaria.io</p>
+    </div>
+       
+    </div>
+ <div class="fus-section fus-feature fus-white-bg " style="padding-top:0px;padding-bottom:0px;border-top: 1px solid #f1f1f2;">
+      <div class="container">
+        
+      
+        
+            <div class="row"  style="padding-top:0px;padding-bottom:0px;">
+              
+              <div class="col-md-9 col-sm-9 col-xs-12" style="padding-top:20px;padding-bottom:20px;">
+                <a class="footer_links">© 2015 Cloudaria, Inc</a> 
+                <a class="footer_links">Contact  </a> 
+                 <a class="footer_links">Blog   </a> 
+                  <a class="footer_links">Terms of Service   </a> 
+                  <a class="footer_links">Privacy    </a> 
+                   
+ 
+                </div>
+        <div class="col-md-3 col-sm-3 col-xs-12 text-right footer_social " style="padding-top:15px;padding-bottom:0px;">
+  <a href="" class="round-icons"><i class="fa fa-facebook fa-2x"></i></a>
+
+  <a href="" class="round-icons"><i class="fa fa-twitter fa-2x"></i></a>
+
+  <a href="" class="round-icons"><i class="fa fa-linkedin fa-2x"></i></a>
+</div>
+                  
+               
+              </div>
+              
+              
+            </div>
+    
+         
         </div>
-        <div class="text-center contact-block">
-          <img src="images/phone.png" class="ft-icon" alt="">
-          <h4>Telephone</h4>
-          <p>+91 99161 01292</p>
-        </div>
-        <div class="text-center contact-block">
-          <img src="images/twitter.png" class="ft-icon" alt="">
-          <h4>Twitter</h4>
-          <p><a href="http://twitter.com/cloudaria1" target="_blank">@cloudaria1</a></p>
-        </div>
+        
       </div>
     </div>
-  </div>
-  <div class="footer">
-    <div class="row">
-      <div class="col col-half links">
-        <span class="a">&copy; 2014 Cloudaria</span>
-        <a href="http://blog.cloudaria.io" target="_blank">Blog</a>
-      </div>
-
-      <div class="col col-half align-right">
-        <img src="images/cloudaria.png" width="160" alt="" class="logo">
-      </div>
-    </div>
-  </div>
-
-  <div class="modal" id="request">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h2 class="modal-title">Get in Touch</h2>
-        </div>
-
-        <div class="modal-body">
-          <form id="contact-form" action="http://app.cloudaria.io/cont" method="POST">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input name="name" id="name" type="text" required class="form-control">
-            </div>
-
-            <div class="form-group">
-              <label for="company">Company</label>
-              <input name="company" id="company" type="text" required class="form-control">
-            </div>
-
-
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input name="email" id="email" type="email" required class="form-control">
-            </div>
-
-
-            <div class="form-group">
-              <label for="phone">Phone</label>
-              <input name="phone" id="phone" type="phone" required class="form-control">
-            </div>
-            <input type="text" name="age" id="a666">
-
-            <button type="submit" class="btn btn-primary btn-block btn-lg" id="contact-btn">Submit</button>
-          </form>
-
-        </div>
-        <div class="modal-footer">
-          <img src="images/email.png" width="16" alt="email:"> <span class="contact-info">hello@cloudaria.io</span><img src="images/phone.png" width="16" alt="phone:"> <span class="contact-info">+91 99161 01292</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.50/jquery.form.min.js"></script>
-  <script src="bootstrap.min.js"></script>
-  <script>
-  $(document).ready(function() {
-    var form = $('#contact-form');
-    form.ajaxForm(function() {
-      form.html('<p>Thanks for your interest. We will get in touch with you shortly.</p>');
-    });
-
-    $('#read-more').on('click', function(e) {
-      e.preventDefault();
-      var target = $(e.currentTarget).attr('href');
-      var coords = $(target).offset();
-      $("html, body").animate({ scrollTop: coords.top });
-    });
-
-  });
-  </script>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-55123659-1', 'auto');
-  ga('send', 'pageview');
-
-  </script>
-</body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   
+    <script src="js/bootstrap.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/jquery.zoom-scroller.js"></script>
+    
+     <!-- Place this tag after the last +1 button tag. -->
+     
+  </body>
 </html>
