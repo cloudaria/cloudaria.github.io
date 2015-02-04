@@ -362,7 +362,7 @@
  
 
 
-                  <a href="#" target="_blank" class="btn btn-lg" style="margin-top:30px;margin-left:-10px;">Request a Demo</a>
+                  <a href="#contact_form" class="scrollto btn btn-lg" style="margin-top:30px;margin-left:-10px;">Request a Demo</a>
                 </div>
               </div>
               <div class="col-md-7 fus-photo">
@@ -394,24 +394,24 @@
                   <div class="fus-header">
                     <h3 class="georgia " style="color:#fff;">See how Cloudaria can help you deliver better customer experiences.</h3>
                   </div>
-                   <form name="contact" action="">
+                   <form id="send_contact" name="contact" action="http://staging.cloudaria.io/cont">
                   <div class="row" style="margin-top:20px;">
 
                       <div class="col-md-4">
                         <div class="form_title">First Name*</div>
 
-                        <input type="text" class="form-control flat" placeholder="Satya">
+                        <input name="first_name" type="text" class="form-control flat" placeholder="Satya">
 
                       </div>
                       <div class="col-md-4">
                         <div class="form_title">Last Name*</div>
 
-                        <input type="text" class="form-control flat" placeholder="Nadella">
+                        <input name="last_name" type="text" class="form-control flat" placeholder="Nadella">
 
                       </div>
                       <div class="col-md-4">
                         <div class="form_title">Work Email*</div>
-                        <input type="text" class="form-control flat" placeholder="satyan@microsoft.com">
+                        <input name="email" type="text" class="form-control flat" placeholder="satyan@microsoft.com">
 
                       </div>
                   </div>
@@ -419,19 +419,19 @@
                       <div class="col-md-4">
                         <div class="form_title">Phone Number (Optional)</div>
 
-                        <input type="text" class="form-control flat" placeholder="+1 (123) 456-7890">
+                        <input name="phone" type="text" class="form-control flat" placeholder="+1 (123) 456-7890">
 
                       </div>
                       <div class="col-md-4">
                         <div class="form_title">Job Title*</div>
 
-                        <input type="text" class="form-control flat" placeholder="CEO">
+                        <input name="job" type="text" class="form-control flat" placeholder="CEO">
 
                       </div>
                       <div class="col-md-4">
                         <div class="form_title">Company Name*</div>
 
-                        <input type="text" class="form-control flat" placeholder="Microsoft">
+                        <input name="company" type="text" class="form-control flat" placeholder="Microsoft">
 
                       </div>
                   </div>
@@ -439,12 +439,12 @@
                       <div class="col-md-12">
                          <div class="form_title">Send us a message (Optional)</div>
 
-                        <textarea type="text" class="form-control flat" rows="5" placeholder="How can Cloudaria help you?" style="color:rgb(89,89,89);"></textarea>
+                        <textarea name="how" type="text" class="form-control flat" rows="5" placeholder="How can Cloudaria help you?" style="color:rgb(89,89,89);"></textarea>
 
                       </div>
                   </div>
 
-                   <a href="#" target="_blank" class="btn btn-lg fus-btn-white " style="margin-top:30px;">Submit</a>
+                   <input type="submit" class="btn btn-lg fus-btn-white" style="margin-top:30px;">
 
 
                   </form>
@@ -501,6 +501,7 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.50/jquery.form.min.js"></script>
     <script type="text/javascript">
 
 
@@ -520,6 +521,14 @@ $('.feature_scroll').click(function(e) {
       // Call the scroll function
     goToByScroll($(this).attr("data-href"));
 });
+
+
+$(document).ready(function() {
+    var form = $('#send_contact');
+    form.ajaxForm(function() {
+      form.html('<p style="color:white;font-size:20px;">Thanks for your interest. We will get in touch with you shortly.</p>');
+    });
+  });
     </script>
     <script src="js/bootstrap.js"></script>
     <script src="js/theme.js"></script>
