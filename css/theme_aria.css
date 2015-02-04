@@ -1221,7 +1221,7 @@ font-size: 1.2em;
 
 /* Small screen */
 @media only screen and (min-device-width: 320px) and (max-device-width: 479px) and (orientation: portrait) {
-    body { background: blue !important }
+    body { background: white !important }
 
 }
 
