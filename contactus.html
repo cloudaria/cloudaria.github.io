@@ -109,20 +109,20 @@
                   <div class="fus-header">
                     <h3 class="georgia " style="color:#fff;">Drop us a line.</h3>
                   </div>
-                   <form method="post" id="send_contact" name="contact" action="http://staging.cloudaria.io/cont">
+                   <form method="post" id="send_contact" name="contact" action="http://localhost:3000/cont">
                   <div class="row" style="margin-top:20px;">
 
                       <div class="col-md-4">
                         <div class="form_title">First Name*</div>
 
-                        <input type="text" class="form-control flat" placeholder="Satya" name="first_name">
+                        <input type="text" required class="form-control flat" placeholder="Satya" name="first_name">
                         <input type="text" name="age" id="a666">
 
                       </div>
                       <div class="col-md-4">
                         <div class="form_title">Last Name*</div>
 
-                        <input type="text" name="last_name" class="form-control flat" placeholder="Nadella">
+                        <input type="text" required name="last_name" class="form-control flat" placeholder="Nadella">
 
                       </div>
                       <div class="col-md-4">
@@ -141,13 +141,13 @@
                       <div class="col-md-4">
                         <div class="form_title">Job Title*</div>
 
-                        <input type="text" name="job" class="form-control flat" placeholder="CEO">
+                        <input type="text" required name="job" class="form-control flat" placeholder="CEO">
 
                       </div>
                       <div class="col-md-4">
                         <div class="form_title">Company Name*</div>
 
-                        <input type="text" name="company" class="form-control flat" placeholder="Microsoft">
+                        <input type="text" required name="company" class="form-control flat" placeholder="Microsoft">
 
                       </div>
                   </div>
